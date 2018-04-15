@@ -1,0 +1,21 @@
+menu "UartLogger Configuration"
+
+config UARTLOGGER_HOSTNAME
+    string "Hostname"
+    default "UartLogger"
+    help
+        Hostname for the network interface.
+
+config LOGGER_HOST
+    string "Logger Address"
+    default "example.com"
+    help
+        Logging server address.
+
+config LOGGER_PORT
+    string "Logger Port"
+    default "80"
+    help
+        Logging server port.
+
+endmenu

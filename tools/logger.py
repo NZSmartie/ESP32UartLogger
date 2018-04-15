@@ -21,11 +21,11 @@ def hello():
     if not request.args.get('token'):
         return 404, ''
     data = request.get_data(as_text=True)
-    with open('logfile.%s.txt' & format_date(), 'a') as file:
+    with open('logfile.%s.txt' % format_date(), 'a') as file:
         for line in data.splitlines():
             file.write('%s  |%s\n' % (format_ts(), line.strip()))
         file.flush()
-    return 201, ""
+    return "", 204
 
 
 if __name__ == '__main__':
